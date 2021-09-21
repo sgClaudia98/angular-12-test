@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PostComponent } from './components/post/post.component';
+import { PostComponent } from './pages/post/post.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { MaterialModule } from './material/material.module';
+import { PostSmallComponent } from './components/post-small/post-small.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { MaterialModule } from './material/material.module';
     FooterComponent,
     HomeComponent,
     PostComponent,
-    CommentComponent
+    CommentComponent,
+    PostSmallComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule

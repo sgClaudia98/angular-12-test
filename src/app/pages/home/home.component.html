@@ -1,1 +1,6 @@
-<p>home works!</p>
+<div class="p-4" *ngIf="!loading">
+  <app-post-small [post]="post" *ngFor="let post of posts"></app-post-small>
+</div>
+<div *ngIf="loading" class="flex text-center">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>
